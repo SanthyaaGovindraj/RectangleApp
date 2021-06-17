@@ -4,8 +4,8 @@ namespace RectangleApp
 {
     public class Rectangle
     {
-        private int length;
-        private int width;
+        public int length;
+        public int width;
 
 
         public Rectangle()
@@ -20,8 +20,9 @@ namespace RectangleApp
             this.width = width;
         }
 
-        public int GetLength()
+        public int GetLength(int length)
         {
+            this.length = length;
             return length;
         }
 
@@ -33,8 +34,9 @@ namespace RectangleApp
         }
 
 
-        public int GetWidth()
+        public int GetWidth(int width)
         {
+            this.width = width;
             return width;
         }
 
@@ -45,14 +47,18 @@ namespace RectangleApp
             return this.width;
         }
 
-        public int GetPerimeter()
+        public int GetPerimeter(int length, int width)
         {
+            this.length = length;
+            this.width = width;
             int perimeter = 2 * (length + width);
             return perimeter;
         }
 
-        public int GetArea()
+        public int GetArea(int length, int width)
         {
+            this.length = length;
+            this.width = width;
             int area = length * width;
             return area;
         }
